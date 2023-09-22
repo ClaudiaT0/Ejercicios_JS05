@@ -19,9 +19,32 @@ functions/structures you've seen before,
 determine and output the highest of those numbers.
  * 
  */
+  /*let num1= 20;
+  let num2= 15;
+   listaNumeros=[num1,num2,]
+    let aux = 0 
+    if(num1>num2){
+      aux=num1
+      console.log("el valor más alto es: "+ aux)
+    }*/
 
-function numeroMayor(){
-}
+    function ordenarNum (numUno,numDos,numTres, numCuatro, numCin, numSeis  ){
+      let listaNum = [numUno,numDos,numTres, numCuatro, numCin, numSeis];
+      let n, i, k, aux;
+      n = listaNum.length;
+      console.log(listaNum); 
+      for (k = 1; k < n; k++) {
+          for (i = 0; i < (n - k); i++) {
+              if (listaNum[i] > listaNum[i + 1]) {
+                  aux = listaNum[i];
+                  listaNum[i] = listaNum[i + 1];
+                  listaNum[i + 1] = aux;
+              }
+          }
+      }
+  
+      console.log("El número más alto es: " + listaNum.length); 
+    }
 
 /**
  * Alarm
@@ -30,10 +53,11 @@ needed until an alarm (message) is executed alongside a text
 to show once those seconds have passed in real time.
 Result example: "Time for bed after 10 seconds".
  */
+console.log("Proporcione tiempo")
 function programAlarm(time) {
-    
-    
-}
+  second= time/1000
+  setTimeout(() => console.log('Time for bed after '+ second +' seconds'), time)
+  }
 
 /**
  * Palindrome
@@ -42,6 +66,7 @@ function programAlarm(time) {
  Figure out if the sentence/word is a palindrome or not.
  Ignoring punctuation, spaces and capitalized letters.
  */
+
 
 
  /**
